@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Rye&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 120px 350px 2;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "image";
+}
+
+:root {
+  --main-color: #e60014;
+  --cyan: #f0f0f0;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--main-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  z-index: 1;
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.75);
+}
+
+header > h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+
+.header-nav {
+  overflow: hidden;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.header-nav > a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 7px 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-nav > a:hover {
+  background-color: #c70013;
+  color: white;
+}
+
+/* Main */
+main {
+  grid-area: main;
+}
+
+main > p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 15px 100px 10px 100px;
+  text-align: left;
+}
+
+/* Section */
+
+section {
+  grid-area: image;
+  display: table-row;
+  text-align: center;
+  justify-content: center;
+}
+
+section > h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
